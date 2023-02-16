@@ -10,4 +10,16 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "Zombie.hpp"
 
+int main(void)
+{
+    Zombie  z;
+
+    Zombie* z_n = z.newZombie("Foo");
+    z.randomChump("Foo");
+
+    delete z_n;
+
+    return (0);
+}

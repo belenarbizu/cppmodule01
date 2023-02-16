@@ -10,4 +10,13 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "Zombie.hpp"
 
+void    Zombie::randomChump(std::string name)
+{
+    Zombie *zz = new Zombie();
+
+    zz->name = name;
+    
+    announce();
+}
