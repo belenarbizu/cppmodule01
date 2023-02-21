@@ -12,11 +12,10 @@
 
 #include "Zombie.hpp"
 
-Zombie* Zombie::newZombie(std::string name)
+//memoria dinamica (heap), uso de new y delete porque la funcion devuelve un puntero
+//tengo que establecer el tamaño del puntero
+
+Zombie* newZombie(std::string name)
 {
-    Zombie* zz = new Zombie();
-
-    zz->name = name;
-
-    return (zz);
+    return (new Zombie(name));
 }

@@ -12,12 +12,15 @@
 
 #include "Zombie.hpp"
 
+Zombie* newZombie(std::string name);
+void    randomChump(std::string name);
+
 int main(void)
 {
-    Zombie  z;
+    Zombie* z_n = newZombie("Bah");
+    z_n->announce();
 
-    Zombie* z_n = z.newZombie("Foo");
-    z.randomChump("Foo");
+    randomChump("Foo");
 
     delete z_n;
 

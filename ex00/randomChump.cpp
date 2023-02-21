@@ -12,11 +12,11 @@
 
 #include "Zombie.hpp"
 
-void    Zombie::randomChump(std::string name)
-{
-    Zombie *zz = new Zombie();
+//memoria stack es más sencillo y rápido, no necesito reservar memoria heap
 
-    zz->name = name;
-    
-    announce();
+void    randomChump(std::string name)
+{
+    Zombie zz = Zombie(name);
+
+    zz.announce();
 }
