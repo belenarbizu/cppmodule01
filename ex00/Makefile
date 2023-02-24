@@ -18,7 +18,7 @@ NAME = zombie
 
 CC = c++
 CFLAGS = -Wall -Wextra -Werror -std=c++98
-RM = rm -f
+RM = rm
 
 ${NAME}:	${OBJS}
 			${CC} ${CFLAGS} ${SRCS} -o ${NAME}
@@ -33,4 +33,4 @@ fclean:	clean
 
 re: fclean ${MAKE} ${NAME}
 
-.PHONY: all clean fclean re libft
+.PHONY: all clean fclean re

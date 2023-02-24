@@ -8,10 +8,11 @@ private:
     std::string _name;
 
 public:
+    Zombie(std::string name);
     Zombie();
     ~Zombie();
 
-    Zombie* zombieHorde(int n, std::string name);
+    void    z_name(std::string name);
     void    announce(void);
 };
 
