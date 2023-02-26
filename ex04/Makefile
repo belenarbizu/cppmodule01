@@ -1,8 +1,8 @@
-SRCS = main.cpp HumanA.cpp HumanB.cpp Weapon.cpp
+SRCS = main.cpp
 
 OBJS = ${SRCS:.cpp=.o}
 
-NAME = zombie
+NAME = replace
 
 CC = c++
 CFLAGS = -Wall -Wextra -Werror -std=c++98
@@ -16,7 +16,7 @@ all:	${NAME}
 clean:
 		${RM} -f ${OBJS}
 
-fclean:	clean
+fclean: clean
 		${RM} -f ${NAME}
 
 re: fclean ${MAKE} ${NAME}
