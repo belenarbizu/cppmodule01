@@ -11,6 +11,7 @@ int main (int argc, char **argv)
     std::string line;
     size_t pos;
     size_t n;
+    size_t s;
     size_t len;
 
     if (argc != 4)
@@ -34,7 +35,10 @@ int main (int argc, char **argv)
                         pos = line.find(argv[2], n);
                         if (pos == std::string::npos)
                         {
-                            copy << line.substr(n, line.length()) << std::endl;
+                            copy << line.substr(n, line.length());
+                            s = line.find_first_of('\n', 0);
+                            if (s >= 0)
+                                copy << '\n';
                             break ;
                         }
                         copy << line.substr(n, pos - n) << argv[3];
