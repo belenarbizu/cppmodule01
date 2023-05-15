@@ -2,14 +2,14 @@ SRCS = main.cpp HumanA.cpp HumanB.cpp Weapon.cpp
 
 OBJS = ${SRCS:.cpp=.o}
 
-NAME = zombie
+NAME = weapon
 
 CC = c++
-CFLAGS = -Wall -Wextra -Werror -std=c++98
+CPPFLAGS = -Wall -Wextra -Werror -std=c++98
 RM = rm
 
 ${NAME}:	${OBJS}
-			${CC} ${CFLAGS} ${SRCS} -o ${NAME}
+			${CC} ${CPPFLAGS} ${SRCS} -o ${NAME}
 
 all:	${NAME}
 
